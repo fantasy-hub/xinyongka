@@ -1,0 +1,1414 @@
+@keyframes breath {
+    to  { transform: scale(1) }
+    50% { transform: scale(1.1) }
+    from { transform: scale(1) }
+}
+@keyframes left-arrow {
+    0%  { transform: translateX(0) }
+    70% { transform: translateX(-0.01rem) }
+    100% { transform: translateX(0) }
+}
+@keyframes flash {
+    from,
+    to {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+}
+@keyframes slideInRight {
+    from {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes shake {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-0.0156rem, 0, 0);
+        transform: translate3d(-0.0156rem, 0, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(0.0156rem, 0, 0);
+        transform: translate3d(0.0156rem, 0, 0);
+    }
+}
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    /* 50% { transform: rotate(180deg); } */
+    100% { transform: rotate(360deg); }
+}
+@keyframes scroll {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-36deg);
+    }
+}
+@keyframes flash {
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+@keyframes rotateOutDownRight {
+    from, 50%, to {
+        transform-origin: 50% 100%;
+    }
+    25% {
+        transform-origin: 50% 100%;
+        -webkit-transform: rotate3d(0, 0, 1, -8deg);
+        transform: rotate3d(0, 0, 1, -8deg);
+    }
+    75% {
+        transform-origin: 50% 100%;
+        -webkit-transform: rotate3d(0, 0, 1, 8deg);
+        transform: rotate3d(0, 0, 1, 8deg);
+    }
+}
+@keyframes slideover {
+    from {
+      -webkit-transform: translate3d(220%, 0, 0);
+      transform: translate3d(220%, 0, 0);
+      visibility: visible;
+      opacity: 0;
+    }
+    10% {
+        opacity: .4;
+    }
+    99% {
+        opacity: .4;
+    }
+    to {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.scroll {
+    animation: 1s scroll linear;
+}
+.slideinright {
+    animation: 1s slideInRight linear;
+}
+.shake {
+    animation: 2s shake infinite;
+}
+.rotate {
+    animation: 120s rotate infinite linear;
+}
+.flash {
+    animation: 1.5s flash infinite;
+}
+.rotateonce {
+    animation: 3s rotateOutDownRight infinite linear;
+    animation-delay: 1.5s;
+}
+.slideover {
+    animation: 5s slideover ease infinite;
+}
+
+
+/* 默认ct样式 */
+.ct {
+    position: relative;
+
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    height: 5.625rem;
+    box-sizing: border-box;
+    padding-top: 0.776rem;
+     /* padding-bottom: 0.4479rem; */
+    padding-left: 1.4583rem;
+    background-image: url('../img/series/enjoy/Group\ 3@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    font-family: 'PingFang-SC-Semibold';
+}
+
+.entry__title {
+    position: absolute;
+    top: 40px;
+    left: 48px;
+    font-size: 32px;
+    font-weight:600;
+    color: rgba(255,255,255,1);
+    line-height: 48px;
+    text-shadow :0px 0px 20px rgba(24,50,93,0.5);
+}
+
+/* //主内容区 */
+.wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    align-items: normal;
+}
+.wrap__series {
+    position: absolute;
+    top: 0.1667rem;
+    font-size: 0.2292rem;
+    color: rgba(255,255,255,1);
+    line-height: 0.3229rem;
+}
+.wrap__content {
+    position: relative;
+    width: 5.2083rem;
+    height: 3.5417rem;
+    background: rgba(255,255,255,1);
+    border-radius: 0.0625rem;
+    margin-top: 0.6146rem;
+}
+.content__circle {
+    position: absolute;
+    top: 0.4323rem;
+    left: 0.9635rem;
+    width: 2.625rem;
+    height: 2.6771rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ct .content__circle {
+    background-image: url('../img/series/enjoy/Group\ 88@2x.png');
+}
+.content__card-bg {
+    position: absolute;
+    top: 1.2448rem;
+    left: 1.2188rem;
+    width: 2.0625rem;
+    height: 1.3802rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ct .content__card-bg {
+    background-image: url('../img/series/enjoy/Rectangle\ 3@2x.png');
+}
+.content__card {
+    position: absolute;
+    top: 1.1979rem;
+    left: 1.3854rem;
+    width: 1.7813rem;
+    height: 1.125rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ct .content__card {
+    background-image: url('../img/series/enjoy/xinyongka.png');
+}
+
+/* 六个列表时模板样式：应用页面-优享卡、金卡、白金卡 */
+.content__list {
+    position: relative;
+    color:rgba(125,136,147,1);
+    font-size: 0.0625rem;
+    height: 100%;
+    opacity: 1;
+    transition: 1s all;
+}
+.items__icon {
+    width: 0.4063rem;
+    height: 0.4063rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-shrink: 0;
+    margin-left: 0.0625rem;
+    margin-right: 0.0625rem;
+}
+.items__introhead {
+    font-size: 0.0833rem;
+    line-height: 1.375;
+    margin-bottom: 0.0208rem;
+}
+.items__introtext {
+    line-height: 1.6;
+}
+.ct .items__introhead {
+    color: rgba(206,30,49,1);
+}
+
+.list__items-1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    width: 1.6927rem;
+    text-align: right;
+
+    position: absolute;
+    left: 0.1458rem;
+    top: 0.3646rem;
+}
+.ct .items-1__icon {
+    background-image: url('../img/series/enjoy/Group\ 12@2x.png');
+}
+
+.list__items-2 {
+    display: flex;
+    align-items: end;
+    width: 1.9688rem;
+
+    position: absolute;
+    right: 0.651rem;
+    top: 0.2865rem;
+}
+.ct .items-2__icon {
+    background-image: url('../img/series/enjoy/Group\ 8@2x.png');
+}
+
+.list__items-3 {
+    display: flex;
+    align-items: end;
+    width: 1.224rem; 
+    text-align: right;
+
+    position: absolute;
+    left: 0.026rem;
+    top: 1.3802rem; 
+}
+.ct .items-3__icon {
+    background-image: url('../img/series/enjoy/Group\ 11\ Copy@2x.png');
+}
+
+.list__items-4 {
+    display: flex;
+    align-items: end;
+    width: 1.224rem; 
+    text-align: left;
+
+    position: absolute;
+    top: 1.375rem;
+    right: 0.651rem;
+}
+.ct .items-4__icon {
+    background-image: url('../img/series/enjoy/Group\ 8\ Copy@2x.png');
+}
+
+.list__items-5 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    width: 1.9479rem;
+    text-align: right;
+
+    position: absolute;
+    top: 2.8385rem; 
+    left: 0.026rem; 
+}
+.ct .items-5__icon {
+    background-image: url('../img/series/enjoy/Group\ 11@2x.png');
+}
+
+.list__items-6 {
+    display: flex;
+    align-items: end;
+    width: 1.7708rem;
+    text-align: left;
+
+    position: absolute;
+    top: 2.7083rem;
+    right: 0.6771rem;
+}
+.ct .items-6__icon {
+    background-image: url('../img/series/enjoy/Group\ 9@2x.png');
+}
+
+/* 右侧介绍 */
+.wrap__side {
+    position: relative;
+    box-sizing: border-box;
+    width: 2.974rem;
+    height: 4.9479rem;
+    padding-top: 1.8802rem;
+    padding-right: 0.6719rem;
+    padding-left: 0.4427rem;
+    transform: translateX(-0.9896rem);
+    border-radius: 0rem 0.0625rem 0.0625rem 0rem;
+    font-size: 0.0729rem;
+    line-height: 0.1146rem;
+    color: rgba(255,255,255,1);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ct .wrap__side {
+    background-image: url('../img/series/enjoy/enjoy.png');
+}
+.side__handup {
+    position: absolute;
+    top: 0.5208rem;
+    right: 0.4167rem;
+    width: 1.5417rem;
+    height: 0.6354rem;
+    background-image: url('../img/series/enjoy/hand@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.side__handdown {
+    position: absolute;
+    z-index: 2;
+    top: 0.8281rem;
+    right: 0.4167rem;
+    width: 1.151rem;
+    height: 0.5052rem;
+    background-image: url('../img/series/enjoy/thumb@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.side__card {
+    position: absolute;
+    z-index: 1;
+    top: 0.9271rem;
+    left: 0.4427rem;
+    width: 1.2031rem;
+    height: 0.7813rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ct .side__card {
+    background-image: url('../img/series/enjoy/youxiangka011@2x.png');
+}
+.side__intro {
+    margin-top: 0.0885rem;
+    font-size: 0.0833rem;
+    line-height: 0.1458rem;
+    max-width: 1.4375rem;
+}
+
+
+/* sidebar滚轮样式: 初始LINEFRIENDS粉丝信用卡 */
+.wrap__sidebar {
+    position: relative;
+    box-sizing: border-box;
+    width: 2.974rem;
+    height: 4.9479rem;
+    overflow: hidden;
+    background-image: url('../img/series/line/lineside.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(-0.9896rem);
+    padding: 0.099rem 0.4115rem 0.4479rem 0.2031rem;
+}
+.sidebar__ct {
+    position: relative;
+    overflow: hidden;
+    width: 2.3594rem;
+    height: 4.401rem;
+}
+.sidebar__imgbg {
+    position: absolute;
+    left: -2.9427rem;
+    top: -0.0781rem;
+    width: 4.5833rem;
+    height: 4.5833rem;
+    transition: all .5s;
+    
+}
+.sidebar__card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0.7292rem;
+    height: 1.151rem;
+    margin-left: -0.3646rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform-origin: 50% 2.2917rem;
+}
+.card-1 {
+    transform: rotate(18deg);
+}
+.card-2 {
+    transform: rotate(54deg);
+}
+.card-3 {
+    transform: rotate(90deg);
+}
+.card-4 {
+    transform: rotate(126deg);
+}
+.card-5 {
+    transform: rotate(162deg);
+}
+.card-6 {
+    transform: rotate(198deg);
+}
+.card-7 {
+    transform: rotate(234deg);
+}
+.card-8 {
+    transform: rotate(270deg);
+}
+.card-9 {
+    transform: rotate(306deg);
+}
+.card-10 {
+    transform: rotate(342deg);
+}
+.ct .card-1,
+.ct .card-6 {
+    background-image: url('../img/series/sidebarimgcol/line-07503.png');
+}
+.ct .card-2,
+.ct .card-7 {
+    background-image: url('../img/series/sidebarimgcol/line-07502.png');
+}
+.ct .card-3,
+.ct .card-8 {
+    background-image: url('../img/series/sidebarimgcol/line-07504.png');
+}
+.ct .card-4,
+.ct .card-9 {
+    background-image: url('../img/series/sidebarimgcol/line-07509.png');
+}
+.ct .card-5,
+.ct .card-10 {
+    background-image: url('../img/series/sidebarimgcol/line-07507.png');
+}
+
+.sidebar__intro {
+    position: absolute;
+    top: 48%;
+    left: 72%;
+    font-size: 0.0625rem;
+    color:rgba(255,255,255,1);
+}
+.sidebar__intro .sidebar__intro-head {
+    font-size: 0.0729rem;
+    margin-bottom: 0.0313rem;
+    line-height: 1.2;
+    max-width: 0.651rem;
+}
+
+/* 二维码 */
+.code {
+    position: absolute;
+    left: 8.0625rem;
+    top: 3.5677rem;
+    width: 1.3958rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    font-size: 0.1042rem;
+
+    color: rgba(255,255,255,1);
+    line-height: 0.1458rem;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    padding-top: 0.276rem;
+    padding-bottom: 0.3177rem;
+}
+.code__img {
+    width: 0.8333rem;
+    height: 0.8333rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ct .code__img {
+    background-image: url('../img/series/enjoy/Group\ 10@2x.png');
+}
+.code__intro {
+    position: relative;
+    transform: translateY(0.0417rem);
+    overflow: hidden;
+    width: 0.9375rem;
+    border-radius: 0.0625rem;
+}
+.code__intro-bg {
+    width: 0.4323rem;
+    height: 0.3281rem;
+    opacity: .4;
+    background-image: url('../img/home/Lightslideblue.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.code__intro-text {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    white-space: nowrap;
+}
+.ct .code {
+    background-image: url('../img/series/enjoy/Group@2x.png');
+}
+
+ /* 切换模式 */
+.switch-mode {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    bottom: 0;
+    left: 0;
+}
+.switch-mode__icon {
+    width: 0.776rem;
+    height: 0.7083rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ct .switch-mode__icon {
+    background-image: url('../img/series/enjoy/Oval\ 5@2x.png');
+}
+.switch-mode__icon-door {
+    width: 0.0938rem;
+    height: 0.1302rem;
+    position: absolute;
+    bottom: 0.1823rem;
+    left: 0.1563rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ct .switch-mode__icon-door {
+    background-image: url('../img/series/enjoy/list-with-dots@2x.png');
+}
+.switch-mode__icon-arrow {
+    width: 0.0417rem;
+    height: 0.0313rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0.1354rem;
+    bottom: 0.2396rem;
+    animation: left-arrow 1.2s infinite;
+}
+.ct .switch-mode__icon-arrow {
+    background-image: url('../img/series/enjoy/Arrow@2x.png');
+}
+.switch-mode__word {
+    font-size: 0.0625rem;
+
+    position: absolute;
+    left: 0.1302rem;
+    bottom: 0.0677rem;
+}
+.ct .switch-mode__word {
+    color:rgba(206,30,49,1);
+}
+
+/* 客服样式 */
+.server {
+    position: absolute;
+    top: 3.6094rem;
+    left: 8.2396rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+.server .server__starsmall {
+    position: absolute;
+    left: 0.0885rem;
+    top: 0.3281rem;
+    width: 0.0469rem;
+    height: 0.0417rem;
+    background-image: url('../img/series/gold/Star\ Copy@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+   animation-duration: 2.5s;
+}
+.server .server__starbig {
+    position: absolute;
+    left: 0.1198rem;
+    top: 0.1823rem;
+    width: 0.0677rem;
+    height: 0.0677rem;
+    background-image: url('../img/series/gold/Star@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.server .server__body {
+    width: 0.6771rem;
+    height: 0.4896rem;
+    margin-top: -0.0313rem;
+    background-image: url('../img/series/gold/Body@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.server .server__head {
+    width: 0.5938rem;
+    height: 0.5729rem;
+    background-image: url('../img/series/gold/Head@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 0.0938rem;
+}
+
+.server__text {
+    position: relative;
+    width: 0.9375rem;
+    height: 0.3385rem;
+    overflow: hidden;
+    border-radius: 0.0365rem;
+    margin-top: -0.0417rem;
+    font-size: 0.1042rem;
+    color:rgba(255,255,255,1);
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+.server__text .server__text-bg {
+    width: 0.4479rem;
+    height: 0.3385rem;
+    opacity: .4;
+    background-image: url('../img/home/Lightslideblue.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.server__text .server__text-int {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ct .server__text {
+    background-image: url('../img/series/gold/Rectangle\ 2@2x.png');
+}
+
+/* 蒙层样式 */
+.coverwrap {
+    display: none;
+    z-index: 1;
+}
+.cover {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    background-color: #000;
+}
+.coverct {
+    opacity: 1;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.2917rem;
+    height: 2.4844rem;
+    box-sizing: border-box;
+    padding-top: 1.1563rem;
+    background-image: url('../img/series/popup/promote.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size:0.1563rem;
+    color:rgba(44,44,44,1);
+    line-height:0.2292rem;
+    text-align: center;  
+}
+.coverct .coverct__content {
+    margin-bottom: 0.5417rem;
+}
+.coverct .coverct__footer {
+    padding-left: 0.2083rem;
+    padding-right: 0.2083rem;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(155,155,155,1);
+}
+.coverct .coverct__footer .coverct__footer-left {
+    width: 0.7292rem;
+}
+.coverct .coverct__footer .coverct__footer-right {
+    color:rgba(77,154,255,1);
+    width: 0.7292rem;
+}
+
+.coverbg__change {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3.2292rem;
+    height: 1.0417rem;
+    background:rgba(255,255,255,1);
+    border-radius:0.0625rem;
+    box-sizing: border-box;
+    padding: 0.1875rem;
+    font-size:0.1563rem;
+    color:rgba(44,44,44,1);
+    line-height:0.2292rem;
+    text-align: center;
+}
+.coverbg__change-tel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.0885rem;  
+}
+.coverbg__change-tel .tel__icon-0 {
+    display: none;
+    width: 0.3542rem;
+    height: 0.3542rem;
+    background-image: url('../img/series/popup/success@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.coverbg__change-tel .tel__icon-1 {
+    width: 0.3125rem;
+    height: 0.349rem;
+    background-image: url('../img/series/popup/phone@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.coverbg__change-tel .tel-point {
+    /*display: block!important;*/
+    width: 0.0625rem;
+    height: 0.0625rem;
+    margin-right: 0.0521rem;
+    background-image: url('../img/series/popup/Oval\ Copy\ 2@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.coverbg__change-tel .tel__icon-2 {
+    animation-name: flash;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.coverbg__change-tel .tel__icon-3 {
+    animation-name: flash;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-duration: 1.6s;
+}
+.coverbg__change-tel .tel__icon-4 {
+    animation-name: flash;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-duration: 1.7s;
+}
+
+
+/* 特色图标样式 */
+.feature {
+    width: 1.5833rem;
+    height: 1.25rem;
+    background-image: url('../img/series/line/linebears.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0.5208rem;
+    left: 4.4063rem;
+}
+
+
+/* 四个列表时模板样式: 以页面5-粉丝卡样式模板——应用页面：粉丝卡、fm卡 */
+.content__list {
+    position: relative;
+    color:rgba(125,136,147,1);
+    font-size: 0.0625rem;
+    height: 100%;
+}
+.ite__introhead {
+    font-size: 0.0833rem;
+    line-height: 1.375;
+    margin-bottom: 0.0208rem;
+}
+.ite__introtext {
+    line-height: 1.6;
+}
+.ct .ite__introhead {
+    color:rgba(3,108,208,1);
+}
+
+.list__ite-1 {
+    display: flex;
+    align-items: end;
+    width: 1.3438rem;
+    text-align: right;
+
+    position: absolute;
+    left: 0.1198rem;
+    top: 0.6979rem;
+}
+.ct .ite-1__icon {
+    background-image: url('../img/series/line/linepig.png');
+}
+.list__ite-2 {
+    display: flex;
+    align-items: end;
+    width: 1.5625rem;
+
+    position: absolute;
+    top: 0.526rem;
+    left: 2.974rem;
+
+    
+}
+.list__ite-2 .ite__introtext {
+    word-break: break-all;
+}
+
+.ct .ite-2__icon {
+    background-image: url('../img/series/line/lineheart.png');
+}
+.list__ite-3 {
+    display: flex;
+    align-items: end;
+    width: 1.4583rem;
+    text-align: right;
+
+    position: absolute;
+    left: 0.026rem;
+    top: 2.4479rem;
+}
+.ct .ite-3__icon {
+    background-image: url('../img/series/line/linebeg.png');
+}
+.list__ite-4 {
+    display: flex;
+    align-items: end;
+    width: 1.7188rem;
+    text-align: left;
+
+    position: absolute;
+    top: 2.6615rem;
+    left: 2.849rem;
+}
+.ct .ite-4__icon {
+    background-image: url('../img/series/line/lineperson.png');
+}
+
+/* 页面4-财富卡样式 */
+.wealth {
+    position: relative;
+    color: rgba(125,136,147,1);
+    font-size: 0.0625rem;
+    height: 100%;
+}
+.wealth__introhead {
+    font-size: 0.0833rem;
+    line-height: 1.375;
+    color: rgba(0,0,0,1);
+    margin-bottom: 0.0208rem;
+}
+.wealth__introtext {
+    line-height: 1.6;
+}
+.list__wealth-1 {
+    display: flex;
+    align-items: end;
+    width: 1.3438rem;
+    text-align: right;
+    word-break:break-all; 
+
+    position: absolute;
+    top: 0.349rem;
+    left: 0.4896rem;
+}
+.wealth-1__icon {
+    background-image: url('../img/series/wealth/wealthmian.png');
+}
+.list__wealth-2 {
+    display: flex;
+    align-items: end;
+    width: 1.3438rem;
+
+    position: absolute;
+    top: 0.6198rem;
+    left: 2.9896rem;
+
+    
+}
+.list__wealth-2 .wealth-1__intro {
+    margin-top: 0.0156rem;
+}
+.wealth-2__icon {
+    background-image: url('../img/series/wealth/wealth1.png');
+}
+.list__wealth-3 {
+    display: flex;
+    align-items: end;
+    width: 1.151rem;
+    text-align: right;
+
+    position: absolute;
+    top: 1.5729rem;
+    left: 0.026rem;
+
+    
+}
+.list__wealth-3 .wealth-3__intro {
+    margin-top: 0.0573rem;
+}
+.wealth-3__icon {
+    background-image: url('../img/series/wealth/wealth20.png');
+}
+.list__wealth-4 {
+    display: flex;
+    align-items: end;
+    width: 1.7448rem;
+    text-align: right;
+    position: absolute;
+    top: 2.8125rem;
+    left: 0.1563rem;
+}
+.list__wealth-4 .wealth-4__intro {
+    margin-top: 0.0573rem;
+}
+.list__wealth-4 .wealth__introtext {
+    text-indent: -0.0052rem;
+}
+
+.wealth-4__icon {
+    background-image: url('../img/series/wealth/wealth8.png');
+}
+.list__wealth-5 {
+    display: flex;
+    align-items: end;
+    width: 1.4844rem;
+
+    position: absolute;
+    top: 2.4531rem;
+    left: 3.0417rem;  
+}
+.list__wealth-5 .wealth-5__intro {
+    margin-top: 0.0625rem;
+}
+
+.wealth-5__icon {
+    background-image: url('../img/series/wealth/wealthglobal.png');
+}
+
+/* 页面7-JOY卡列表样式 */
+.joy {
+    position: relative;
+    color:rgba(125,136,147,1);
+    font-size: 0.0625rem;
+    height: 100%;
+}
+.joy__introhead {
+    font-size: 0.0833rem;
+    line-height: 1.375;
+    color:rgba(3,166,208,1);
+    margin-bottom: 0.0208rem;
+}
+.joy__introtext {
+    line-height: 1.6;
+}
+.list__joy-1 {
+    display: flex;
+    align-items: end;
+    width: 1.3542rem;
+    text-align: right;
+
+    position: absolute;
+    top: 0.2188rem;
+    left: 0.8854rem;
+}
+.list__joy-1 .joy-1__intro {
+    margin-top: 0.0729rem;
+}
+.joy-1__icon {
+    background-image: url('../img/series/joy/joymoney.png');
+}
+.list__joy-2 {
+    display: flex;
+    align-items: end;
+    width: 1.0208rem;
+    text-align: right;
+
+    position: absolute;
+    top: 1.2292rem;
+    left: 0.2031rem;
+}
+.joy-2__icon {
+    background-image: url('../img/series/joy/joydiecard.png');
+}
+.list__joy-3 {
+    display: flex;
+    align-items: end;
+    width: 1.151rem;
+
+    position: absolute;
+    top: 0.8385rem;
+    left: 3.1667rem;
+}
+.list__joy-3 .joy-3__intro {
+    margin-top: 0.0573rem;
+}
+
+.joy-3__icon {
+    background-image: url('../img/series/joy/joycap.png');
+}
+.list__joy-4 {
+    display: flex;
+    align-items: end;
+    width: 1.3542rem;
+    text-align: right;
+
+    position: absolute;
+    top: 2.4219rem;
+    left: 0.1042rem; 
+}
+.list__joy-4 .joy-4__intro {
+    margin-top: 0.0573rem;
+}
+.list__joy-4 .joy__introtext {
+    text-indent: -0.0052rem;
+}
+
+.joy-4__icon {
+    background-image: url('../img/series/joy/joycap.png');
+}
+.list__joy-5 {
+    display: flex;
+    align-items: end;
+    width: 1.5104rem;
+
+    position: absolute;
+    top: 2.6719rem;
+    left: 2.849rem;
+}
+.joy-5__icon {
+    background-image: url('../img/series/joy/joyflower.png');
+}
+
+/* 页面2-金卡页面样式 */
+.ct.ct2 {
+    background-image: url('../img/series/gold/goldbgimg.png');
+}
+.ct.ct2 .content__circle {
+    background-image: url('../img/series/gold/Group-gold@2x.png');
+}
+.ct.ct2 .content__card-bg {
+    background-image: url('../img/series/gold/goldbg.png');
+}
+.ct.ct2 .content__card {
+    background-image: url('../img/series/gold/goldcard@2x.png');
+}
+.ct.ct2 .items__introhead {
+    color: rgba(199,142,0,1);
+}
+.ct.ct2 .items-1__icon {
+    background-image: url('../img/series/gold/Group\ 12@2x.png');
+}
+.ct.ct2 .items-2__icon {
+    background-image: url('../img/series/gold/Group\ 8@2x.png');
+}
+.ct.ct2 .items-3__icon {
+    background-image: url('../img/series/gold/Group\ 11\ Copy@2x.png');
+}
+.ct.ct2 .items-4__icon {
+    background-image: url('../img/series/gold/Group\ 8\ Copy@2x.png');
+}
+.ct.ct2 .items-5__icon {
+    background-image: url('../img/series/gold/Group\ 11@2x.png');
+}
+.ct.ct2 .items-6__icon {
+    background-image: url('../img/series/gold/Group\ 9@2x.png');
+}
+.ct.ct2 .wrap__side {
+    background-image: url('../img/series/gold/goldsidebg.png');
+}
+.ct.ct2 .side__card {
+    background-image: url('../img/series/gold/goldcard-reverse@2x.png');
+}
+.ct.ct2 .switch-mode__icon {
+    background-image: url('../img/series/gold/Oval 5@2x.png');
+}
+.ct.ct2 .switch-mode__icon-door {
+    background-image: url('../img/series/gold/list-with-dots@2x.png');
+}
+.ct.ct2 .switch-mode__icon-arrow {
+    background-image: url('../img/series/gold/Arrow@2x.png');
+}
+.ct.ct2 .switch-mode__word {
+    color: rgba(199,142,0,1);
+}
+
+
+/* 页面3-白金卡页面样式 */
+.ct.ct3 {
+   background-image: url('../img/series/platinum/platinumbg.png');
+}
+.ct.ct3 .content__circle {
+    background-image: url('../img/series/platinum/platinumcircle.png');
+}
+.ct.ct3 .content__card-bg {
+    background-image: url('../img/series/platinum/platinumgraybg.png');
+}
+.ct.ct3 .content__card {
+    background-image: url('../img/series/platinum/platinumcardx.png');
+}
+.ct.ct3 .items__introhead {
+    color: rgba(89,89,89,1);
+}
+.ct.ct3 .items-1__icon {
+    background-image: url('../img/series/platinum/platinummian.png');
+}
+.ct.ct3 .items-2__icon {
+    background-image: url('../img/series/platinum/platinum1.png');
+}
+.ct.ct3 .items-3__icon {
+    background-image: url('../img/series/platinum/platinum20.png');
+}
+.ct.ct3 .items-4__icon {
+    background-image: url('../img/series/platinum/platinum5.png');
+}
+.ct.ct3 .items-5__icon {
+    background-image: url('../img/series/platinum/platinum8.png');
+}
+.ct.ct3 .items-6__icon {
+    background-image: url('../img/series/platinum/platinumgloble.png');
+}
+.ct.ct3 .wrap__side {
+    background-image: url('../img/series/platinum/platinumgsidebg.png');
+}
+.ct.ct3 .side__card {
+    background-image: url('../img/series/platinum/platinumreverse.png');
+}
+.ct.ct3 .switch-mode__icon {
+    background-image: url('../img/series/platinum/platinumhalf.png');
+}
+.ct.ct3 .switch-mode__icon-door {
+    background-image: url('../img/series/platinum/platinumbook.png');
+}
+.ct.ct3 .switch-mode__icon-arrow {
+    background-image: url('../img/series/platinum/platinumarrow.png');
+}
+.ct.ct3 .switch-mode__word {
+    color: rgba(89,89,89,1);
+}
+.ct.ct3 .server__text {
+    background-image: url('../img/series/platinum/platinumtextbg.png');
+}
+
+
+/* 页面4-财富卡页面样式 */
+.ct.ct4 {
+    background-image: url('../img/series/wealth/wealthbg.png');
+}
+.ct.ct4 .content__circle {
+    background-image: url('../img/series/wealth/wealthcircle.png');
+}
+.ct.ct4 .content__card-bg {
+    background-image: url('../img/series/wealth/wealthcardbg.png');
+}
+.ct.ct4 .content__card {
+    background-image: url('../img/series/wealth/wealthcard.png');
+}
+.ct.ct4 .wrap__side {
+    background-image: url('../img/series/wealth/wealthside.png');
+}
+.ct.ct4 .side__card {
+    background-image: url('../img/series/wealth/wealthcardreverse.png');
+}
+.ct.ct4 .server__text {
+    background-image: url('../img/series/wealth/wealthserver.png');
+}
+.ct.ct4 .switch-mode__icon {
+    background-image: url('../img/series/wealth/wealthhalf.png');
+}
+.ct.ct4 .switch-mode__icon-door {
+    background-image: url('../img/series/wealth/wealthdoor.png');
+}
+.ct.ct4 .switch-mode__icon-arrow {
+    background-image: url('../img/series/wealth/wealthArrow.png');
+}
+.ct.ct4 .switch-mode__word {
+    color:rgba(0,0,0,1);
+}
+
+
+
+/* 页面5-粉丝卡页面样式 */
+.ct.ct5 {
+    background-image: url('../img/series/line/linebg.png');
+}
+.ct.ct5 .content__circle {
+    background-image: url('../img/series/line/linecircle.png');
+}
+.ct.ct5 .content__card-bg {
+    background-image: url('../img/series/line/linecardbg.png');
+}
+.ct.ct5 .content__card {
+    background-image: url('../img/series/sidecard/07504-1.png');
+}
+.ct.ct5 .wrap__side {
+    background: url('../img/series/line/lineside.png') no-repeat;
+    background-size: contain;
+}
+.ct.ct5 .switch-mode__icon {
+    background-image: url('../img/series/line/linehalf.png');
+}
+.ct.ct5 .switch-mode__icon-door {
+    background-image: url('../img/series/line/linedoor.png');
+}
+.ct.ct5 .switch-mode__icon-arrow {
+    background-image: url('../img/series/line/linearrow.png');
+}
+.ct.ct5 .switch-mode__word {
+    color: rgba(50,125,228,1);
+}
+.ct.ct5 .code {
+    background-image: url('../img/series/line/linecodebg.png');
+}
+.ct.ct5 .code__img {
+    background-image: url('../img/series/line/Linefriendscode.png');
+}
+
+/* 页面6-fm卡页面样式 */
+.ct.ct6 {
+    background-image: url('../img/series/fm/fmbg.png');
+}
+.ct.ct6 .content__circle {
+    background-image: url('../img/series/fm/fmcircle.png');
+}
+.ct.ct6 .content__card-bg {
+    background-image: url('../img/series/fm/fmcardbg.png');
+}
+.ct.ct6 .content__card {
+    background-image: url('../img/series/sidecard/11801-1.png');
+}
+.ct.ct6 .ite__introhead {
+    color: rgba(105,64,144,1);
+}
+.ct.ct6 .ite-1__icon {
+    background-image: url('../img/series/fm/fmcap.png');
+}
+.ct.ct6 .ite-2__icon {
+    background-image: url('../img/series/fm/fmcarame.png');
+}
+.ct.ct6 .ite-3__icon {
+    background-image: url('../img/series/fm/fmcar.png');
+}
+.ct.ct6 .ite-4__icon {
+    background-image: url('../img/series/fm/fmair.png');
+}
+.ct.ct6 .wrap__sidebar {
+    background-image: url('../img/series/fm/fmside.png');
+}
+.ct.ct6 .switch-mode__icon {
+    background-image: url('../img/series/fm/fmswitch.png');
+}
+.ct.ct6 .switch-mode__icon-door {
+    background-image: url('../img/series/fm/fmdoor.png');
+}
+.ct.ct6 .switch-mode__icon-arrow {
+    background-image: url('../img/series/fm/fmarrow.png');
+}
+.ct.ct6 .switch-mode__word {
+    color: rgba(110,38,151,1);
+}
+.ct.ct6 .code__img {
+    background-image: url('../img/series/fm/fmcodeimg.png');
+}
+.ct.ct6 .card-1,
+.ct.ct6 .card-6 {
+    background-image: url('../img/series/sidebarimgcol/fm-11802.png');
+}
+.ct.ct6 .card-2,
+.ct.ct6 .card-7 {
+    background-image: url('../img/series/sidebarimgcol/fm-11803.png');
+}
+.ct.ct6 .card-3,
+.ct.ct6 .card-8 {
+    background-image: url('../img/series/sidebarimgcol/fm-11801.png');
+}
+.ct.ct6 .card-4,
+.ct.ct6 .card-9 {
+    background-image: url('../img/series/sidebarimgcol/fm-02801.png');
+}
+.ct.ct6 .card-5,
+.ct.ct6 .card-10 {
+    background-image: url('../img/series/sidebarimgcol/fm-02802.png');
+}
+
+/* 页面7-JOY卡页面样式 */
+.ct.ct7 {
+    background-image: url('../img/series/joy/joybg.png');
+}
+.ct.ct7 .content__circle {
+    background-image: url('../img/series/joy/joycircle.png');
+}
+.ct.ct7 .content__card-bg {
+    background-image: url('../img/series/joy/joycardbg.png');
+}
+.ct.ct7 .content__card {
+    background-image: url('../img/series/sidecard/29301-1.png');
+}
+.ct.ct7 .wrap__sidebar {
+    background-image: url('../img/series/joy/joyside.png');
+}
+.ct.ct7 .code {
+    background-image: url('../img/series/joy/joycodebg.png');
+}
+.ct.ct7 .switch-mode__icon {
+    background-image: url('../img/series/joy/joyhalf.png');
+}
+.ct.ct7 .switch-mode__icon-door {
+    background-image: url('../img/series/joy/joydoor.png');
+}
+.ct.ct7 .switch-mode__icon-arrow {
+    background-image: url('../img/series/joy/joyarrow.png');
+}
+.ct.ct7 .switch-mode__word {
+    color: rgba(3,166,208,1);
+}
+.ct.ct7 .feature {
+    background-image: url('../img/series/joy/joyfeature.png');
+}
+.ct.ct7 .code__img {
+    background-image: url('../img/series/joy/joycodeimg.png');
+}
+.ct.ct7 .card-1,
+.ct.ct7 .card-6 {
+    background-image: url('../img/series/sidebarimgcol/joy-29501.png');
+}
+.ct.ct7 .card-2,
+.ct7.ct7 .card-7 {
+    background-image: url('../img/series/sidebarimgcol/joy-09701.png');
+}
+.ct.ct7 .card-3,
+.ct.ct7 .card-8 {
+    background-image: url('../img/series/sidebarimgcol/joy-29301.png');
+}
+.ct.ct7 .card-4,
+.ct.ct7 .card-9 {
+    background-image: url('../img/series/sidebarimgcol/joycard.png');
+}
+.ct.ct7 .card-5,
+.ct.ct7 .card-10
+ {
+    background-image: url('../img/series/sidebarimgcol/joy-09701.png');
+}

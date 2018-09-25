@@ -1,0 +1,336 @@
+@keyframes slideInRight {
+    from {
+        -webkit-transform: translate3d(395%, 0, 0);
+        transform: translate3d(395%, 0, 0);
+        visibility: visible;
+    }
+    to {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+@keyframes breath {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes slideFaceLine {
+    from,to {
+        -webkit-transform: translate3d(0, -90%, 0);
+        transform: translate3d(0, -90%, 0);
+        visibility: visible;
+    }
+  
+    50% {
+        -webkit-transform: translate3d(0, 70%, 0);
+        transform: translate3d(0, 70%, 0);
+    }
+}
+@keyframes slideOver {
+    from,to {
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0);
+        visibility: visible;
+    }
+    
+      50% {
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }    
+}
+@keyframes skewX {
+    from,to {
+        transform: skewX(-15deg)
+    }
+    50% {
+        transform: skewX(15DEG)
+    }
+}
+@keyframes skewY {
+    from,to {
+        transform: skew(-10deg);
+    }
+    50% {
+        transform: skew(10deg);
+    }
+}
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -25px, 0);
+      transform: translate3d(0, -25px, 0);
+    }
+  
+    70% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, -4px, 0);
+      transform: translate3d(0, -4px, 0);
+    }
+}
+@keyframes shake {
+    from,
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translate3d(-4px, 0, 0);
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      -webkit-transform: translate3d(4px, 0, 0);
+      transform: translate3d(4px, 0, 0);
+    }
+}
+
+.breath {
+    animation: 2s breath infinite;
+}
+.slideOver {
+    animation: 3s slideOver infinite;
+}
+.skewX {
+    animation: 3s skewX infinite;
+}
+.skewY {
+    animation: 2.5s skewY infinite;
+}
+.bounce {
+    animation: 1.5s bounce infinite;
+}
+.shake {
+    animation: 2s shake infinite;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+.main {
+    width: 100%;
+    height: 5.625rem;
+    background: url('../img/home/shualian@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.wrap {
+    position: relative;;
+    float: right;
+    margin-top: 1.4844rem;
+    margin-right: 0.5365rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrap::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.wrap__title {
+    width: 3.9271rem;
+    height: 0.4531rem;
+    line-height: 0.4531rem;
+    margin-bottom: 0.1667rem;
+    background-image: url('../img/home/cece@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.wrap__line {
+    width: 3.6146rem;
+    height: 0.0156rem;
+    margin-bottom: 0.1667rem;
+    background-image: url('../img/home/lines@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.wrap__icon {
+    position: absolute;
+    top: 0.7552rem;
+    left: 3.0156rem;
+    width: 0.3594rem;
+    height: 0.2969rem;
+    margin-right: 0.3438rem;
+    background-image: url('../img/home/Triangle@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+.wrap__icon::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.wrap__test {
+    margin-top: 1.0677rem;
+    font-size: 0.125rem;
+    font-family: 'PingFangSC-Medium';
+    color: rgba(255,255,255,1);
+    line-height: 0.1719rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrap__test .test__head {
+    text-align: center;
+    margin-bottom: 0.0938rem;
+    letter-spacing:0.0208rem;
+    opacity: .6;
+}
+.wrap__direc {
+    width: 2.849rem;
+    background: linear-gradient(-134.4deg,rgba(252,245,60,1),rgba(248,231,28,1)); 
+    border-radius:0.0625rem;
+    
+}
+.wrap__direc .test__btn {
+    font-size: 0.2292rem;
+    color: rgba(82,79,11,1);
+    font-weight: bold;
+    height: 0.5625rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.0625rem; 
+}
+.wrap__direc .test__btn .direc__slide {
+    display: inline-block;
+    width: 0.7552rem;
+    height: 0.5573rem;
+    margin-left: 0.0104rem;
+    background-image: url('../img/home/Lightslideblue.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: 5s slideInRight ease-in-out infinite;
+}
+.wrap__direc .test__btn .text__btn-intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 0.3229rem;
+    font-weight: bold;
+    letter-spacing:0.0104rem;
+}
+
+/* 后添加脸部动画 */
+.iconct {
+    position: relative;
+}
+.iconct__faceline {
+    position: absolute;
+    left: 1.8958rem;
+    top: 1.8229rem;
+    width: 1.5365rem;
+    height: 0.9583rem;
+    background: url('../img/home/Line@2x.png') no-repeat;
+    background-size: contain;
+    animation: 5s slideFaceLine infinite linear;
+}
+.iconct__cloud {
+    position: absolute;
+    left: 0.6406rem;
+    top: 0.9323rem;
+    width: 0.5417rem;
+    height: 0.5365rem;
+    background: url('../img/home/cloud-01@2x.png') no-repeat;
+    background-size: contain;
+}
+.iconct__cointop {
+    position: absolute;
+    left: 3.6146rem;
+    top: 0.4688rem;
+    width: 0.3385rem;
+    height: 0.401rem;
+    background: url('../img/home/bouns-01@2x.png') no-repeat;
+    background-size: contain;
+    animation-duration: 2.5s;
+}
+.iconct__coinbot {
+    position: absolute;
+    left: 2.4375rem;
+    top: 4.1719rem;
+    width: 0.2448rem;
+    height: 0.2813rem;
+    background: url('../img/home/bouns-01@2x.png') no-repeat;
+    background-size: contain;
+    animation-duration: 2s;    
+}
+.iconct__facebg {
+    position: absolute;
+    left: 3.599rem;
+    top: 1.2135rem;
+    width: 0.8021rem;
+    height: 1.2448rem;
+    background: url('../img/home/xiaolian-01@2x.png') no-repeat;
+    background-size: contain;
+}
+.iconct__card {
+    position: absolute;
+    left: 0.3802rem;
+    top: 1.6979rem;
+    width: 0.5417rem;
+    height: 0.651rem;
+    background: url('../img/home/xinyongka2-01@2x.png') no-repeat;
+    background-size: contain;
+}
+.card-2 {
+    left: 0.5938rem;
+    top: 1.7656rem;
+}
+.iconct__location {
+    position: absolute;
+    left: 1.0625rem;
+    top: 2.4323rem;
+    width: 0.3333rem;
+    height: 0.5156rem;
+    background: url('../img/home/position.png') no-repeat;
+    background-size: contain;
+}
+.iconct__lock {
+    position: absolute;
+    left: 3.3698rem;
+    top: 2.1042rem;
+    width: 0.4375rem;
+    height: 0.7344rem;
+    background: url('../img/home/lock-01@2x.png') no-repeat;
+    background-size: contain;    
+}

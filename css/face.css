@@ -1,0 +1,267 @@
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    /* 50% { transform: rotate(180deg); } */
+    100% { transform: rotate(-360deg); }
+}
+@keyframes rotatereverse {
+    0% { transform: rotate(0); }
+    /* 50% { transform: rotate(180deg); } */
+    100% { transform: rotate(360deg); }
+}
+@keyframes slideDown {
+    from {
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
+    }
+  
+    to {
+         /* visibility: hidden; */
+        -webkit-transform: translate3d(0, -5%, 0);
+        transform: translate3d(0, -5%, 0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 1;
+    }
+  
+    50% {
+        opacity: .5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes left-arrow {
+    0%  { transform: translateX(0) }
+    70% { transform: translateX(-0.01rem) }
+    100% { transform: translateX(0) }
+}
+
+.rotate {
+    animation: 10s rotate infinite linear;
+}
+.rotatereverse {
+    animation: 10s rotatereverse infinite linear;
+}
+.slidedown {
+    animation: 1.5s slideDown infinite linear;
+}
+.fadein {
+    animation: 3s fadeIn infinite linear;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 5.625rem;
+    box-sizing: border-box;
+    background: url('../img/face/state1/Background@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    position: relative;
+}
+.brain {
+    width: 1.7031rem;
+    height: 1.3021rem;
+    background-image: url('../img/face/state1/Computer_1@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0.8073rem;
+    left: 0.8073rem;
+}
+.face {
+    position: relative;
+    box-sizing: border-box;
+    width: 4.1406rem;
+    margin: 0 auto;
+}
+
+.face__center {
+    position: relative; 
+}
+.face__center .face__border-circle {
+    width: 2.8802rem;
+    height: 1.3542rem;
+    background-image: url('../img/face/state1/Small\ circle@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 34%;
+    left: 15%;
+}
+.face__center .face__big-circle {
+    width: 4.1406rem;
+    height: 4.2708rem;
+    background-image: url('../img/face/state1/Big\ circle@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100%;
+}
+.face__center .face__core-circle {
+    width: 2.3438rem;
+    height: 2.3438rem;
+    background-image: url('../img/face/state1/headcircle2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.face__center .face__core-circle img {
+    width: 98%;
+    height: 98%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.face__bottom {
+    position: relative;
+    transform: translateY(-60%);
+    width: 1.625rem;
+    margin: 0 auto;   
+}
+.face__bottom .face__light {
+    width: 1.625rem;
+    height: 1.2292rem;
+    background-image: url('../img/face/state1/Triangle@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.face__bottom .face__trayout {
+    width: 0.7188rem;
+    height: 0.3646rem;
+    background-image: url('../img/face/state1/Oval\ Copy1@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+.face__bottom .face__trayin {
+    width: 0.3385rem;
+    height: 0.1719rem;
+    background-image: url('../img/face/state1/Oval@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -7%);
+}
+.wave {
+    width: 1.0104rem;
+    height: 0.776rem;
+    background-image: url('../img/face/state1/Computer_2@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 1rem;
+    right: 1.5573rem;
+    
+}
+.wave .wave__line {
+    width: 0.9896rem;
+    height: 0.5573rem;
+    background-image: url('../img/face/state1/Path\ 14@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 0.1667rem;
+    margin-left: 0.0208rem;
+}
+.tip {
+    position: absolute;
+    top: 3.5rem;
+    right: 1.0625rem; 
+}
+.tip .tip__title {
+    width: 2.0417rem;
+    margin-bottom: 0.0729rem;
+    line-height: 0.6094rem;
+    text-align: center;
+    font-size: 0.1354rem;
+    font-family: 'PingFangSC-Semibold';
+    color: rgba(255,255,255,1);
+    background-image: url('../img/face/state1/Group\ 7@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.tip .tip__triangle {
+    width: 0.125rem;
+    height: 0.1094rem;
+    background-image: url('../img/face/state1/Triangle\ 2@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 0.4115rem;
+    margin-bottom: 0.0469rem;
+}
+.tip .tip__trayout {
+    width: 0.3854rem;
+    height: 0.1875rem;
+    background-image: url('../img/face/state1/Oval\ Copy1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 0.2813rem;
+}
+.tip .tip__trayin {
+    width: 0.1823rem;
+    height: 0.0885rem;
+    background-image: url('../img/face/state1/Oval1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(210%, -160%);
+}
+
+/* 返回按钮 */
+.switch-mode {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    bottom: 0;
+    left: 0;
+}
+.switch-mode__icon {
+    width: 0.776rem;
+    height: 0.7083rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/series/line/linehalf.png');
+}
+.switch-mode__icon-door {
+    width: 0.0938rem;
+    height: 0.1302rem;
+    position: absolute;
+    bottom: 0.1823rem;
+    left: 0.1563rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/series/line/linedoor.png');
+}
+.switch-mode__icon-arrow {
+    width: 0.0417rem;
+    height: 0.0313rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0.1354rem;
+    bottom: 0.2396rem;
+    animation: left-arrow 1.2s infinite;
+    background-image: url('../img/series/line/linearrow.png');
+}
+.switch-mode__word {
+    font-size: 0.0625rem;
+    color: rgba(50,125,228,1);
+    position: absolute;
+    left: 0.1302rem;
+    bottom: 0.0677rem;
+}
